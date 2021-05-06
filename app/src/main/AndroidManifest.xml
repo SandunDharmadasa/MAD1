@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mad">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MAD1"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MAD">
+        <activity android:name=".payment4"></activity>
+        <activity android:name=".payment3" />
+        <activity android:name=".payment2" />
+        <activity android:name=".payment1" />
+        <activity android:name=".emergency2" />
+        <activity android:name=".emergency1" />
+        <activity android:name=".vaccinate1" />
+        <activity android:name=".vaccinate2" />
+        <activity android:name=".pcr4" />
+        <activity android:name=".pcr3" />
+        <activity android:name=".pcr2" />
+        <activity android:name=".pcr1" />
+        <activity android:name=".MainActivity3" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

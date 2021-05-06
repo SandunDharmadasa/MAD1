@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">MAD</string>
+    <string name="Text1">Book Your Hotel For Quarantine</string>
+    <string name="H1">Name = </string>
+    <string name="H11">Location = </string>
+    <string name="H111">Trincomalee</string>
+    <string name="H12">Price for a day = </string>
+    <string name="H2">Name = </string>
+    <string name="H21">Location = </string>
+    <string name="H112">Waskaduwa</string>
+    <string name="H22">Price for a day = </string>
+    <string name="H3">Name = </string>
+    <string name="H31">Location = </string>
+    <string name="H113">Negambo</string>
+    <string name="H32">Price for a day = </string>
+    <string name="Btn1">Next</string>
+    <string name="T1">Starting Date</string>
+    <string name="T2">Ending Date</string>
+    <string name="T3">Name</string>
+    <string name="T4">N.I.C</string>
+    <string name="T5">Tel Number</string>
+    <string name="Btn2">Total Price</string>
+    <string name="Btn3">Book Now</string>
+    <string name="Name">Covid-19 Health Care</string>
+    <string name="S1">Sign Up</string>
+    <string name="S11">User Name</string>
+    <string name="S12">Password</string>
+    <string name="S13">E-mail</string>
+    <string name="S14">Date of Birth</string>
+    <string name="S15">N.I.C</string>
+    <string name="S16">Gender</string>
+    <string name="S17">Tel No</string>
+    <string name="S18">Address</string>
+    <string name="Btn4">SignUp</string>
+    <string name="S19">Already have n account?</string>
+    <string name="Btn5">SignIn</string>
+    <string name="btnHome">Home</string>
+    <string name="GoBack">Go Back</string>
+    <string name="GoBack1">Go Back</string>
+    <string name="GoBack2">Go Back</string>
+    <string name="textQ">Quarantine</string>
+    <string name="textP">Payment</string>
+    <string name="txtU">User Profile</string>
+    <string name="txtPc">PCR Test</string>
+    <string name="textV">Vaccination</string>
+    <string name="textEmr">Emergency</string>
+    <string name="textSign">Sign Up</string>
+    <string name="T6">No of Days</string>
+    <string name="BtnDelete">Delete Booking</string>
+    <string name="BtnUpdate">Update Booking</string>
+    <string name="edit1">Your Booking Details</string>
+    <string name="edit2">Booking ID</string>
+    <string name="edit3">Name</string>
+    <string name="edit4">Starting Date</string>
+    <string name="edit5">Ending Date</string>
+    <string name="edit6">No of Days</string>
+    <string name="edit7">N.I.C</string>
+    <string name="edit8">Tel Number</string>
+    <string name="btnSave">Save</string>
+    <string name="edit9">Hotel Name</string>
+    <string name="T7">Hotel Name</string>
+    <string name="editT9">Hotel Name</string>
+    <string name="title_activity_payment4">payment4</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="BtnH1">Book Now</string>
+    <string name="BtnH2">Book Now</string>
+    <string name="BtnH3">Book Now</string>
+    <string name="Tp">Price for a day</string>
+    <string name="Th">Hotel Name</string>
+    <string name="edit10">Total Price</string>
+
+
+</resources>
