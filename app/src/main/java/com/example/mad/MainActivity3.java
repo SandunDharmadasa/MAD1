@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity3 extends AppCompatActivity {
 
     TextView tv1 , tv2 , tv3 , tv4 , tv5 , tv6 , tv7 , tv8;
-    Button save , delete;
+    Button save , delete , pay;
     DatabaseReference dbRef;
     Booking bk;
     @Override
@@ -55,6 +55,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         save = findViewById(R.id.save);
         delete = findViewById(R.id.delete);
+        pay = findViewById(R.id.btnPay);
 
         bk = new Booking();
 
@@ -138,5 +139,17 @@ public class MainActivity3 extends AppCompatActivity {
         tv6.setText("");
         tv7.setText("");
         tv8.setText("");
+    }
+
+    protected void onResume() {
+        super.onResume();
+
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity3.this, payment1.class);
+                startActivity(intent);
+            }
+        });
     }
 }

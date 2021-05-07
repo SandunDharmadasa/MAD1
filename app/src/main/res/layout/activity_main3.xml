@@ -125,7 +125,7 @@
 
         <Button
             android:id="@+id/delete"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_weight="1"
             android:text="@string/BtnDelete"
@@ -133,11 +133,12 @@
             app:backgroundTint="#FF0000" />
 
         <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_weight="1"
-            android:text="@string/btnP" />
+            android:text="@string/btnP"
+            app:backgroundTint="#FF0000" />
 
     </LinearLayout>
 
