@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = findViewById(R.id.button);
+        btn1 = findViewById(R.id.button8);
         btn2 = findViewById(R.id.h1);
         btn3 = findViewById(R.id.h2);
         btn4 = findViewById(R.id.h3);
@@ -61,5 +61,21 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("EXTRA_MESSAGE10", n10);
         startActivity(intent);
         Toast.makeText(getApplicationContext(), "You just clicked the Book Now button", Toast.LENGTH_LONG).show();
+    }
+
+    protected void onResume() {
+        super.onResume();
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Home.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 }
