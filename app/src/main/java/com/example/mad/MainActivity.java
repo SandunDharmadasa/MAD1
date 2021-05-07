@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = findViewById(R.id.button);
+        btn1 = findViewById(R.id.button8);
         btn2 = findViewById(R.id.h1);
         btn3 = findViewById(R.id.h2);
         btn4 = findViewById(R.id.h3);
@@ -62,4 +62,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(getApplicationContext(), "You just clicked the Book Now button", Toast.LENGTH_LONG).show();
     }
+
+
 }
