@@ -8,9 +8,10 @@
     tools:context=".pcr2">
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/hospitalName_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hospital1"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,9 +22,10 @@
         app:layout_constraintVertical_bias="0.125" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/hospitalName_2"
         android:layout_width="267dp"
         android:layout_height="20dp"
+        android:text="@string/hospital2"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,9 +36,10 @@
         app:layout_constraintVertical_bias="0.298" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/hospitalName_4"
         android:layout_width="272dp"
         android:layout_height="20dp"
+        android:text="@string/hospital4"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,9 +50,10 @@
         app:layout_constraintVertical_bias="0.563" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/hospitalName_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hospital3"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,9 +64,10 @@
         app:layout_constraintVertical_bias="0.424" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/hospitalName_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hospital5"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,9 +78,10 @@
         app:layout_constraintVertical_bias="0.693" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/hospitalName_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hospital6"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,6 +95,7 @@
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hospital1_Part2"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,6 +109,7 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/hospital6_Part2"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,6 +136,8 @@
         android:layout_width="122dp"
         android:layout_height="38dp"
         android:gravity="end"
+        android:onClick="goFormActivity_1"
+        android:text="@string/bookingbutton"
         android:textAlignment="textEnd"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,6 +152,8 @@
         android:layout_width="122dp"
         android:layout_height="38dp"
         android:gravity="end"
+        android:onClick="goFormActivity_2"
+        android:text="@string/bookingbutton"
         android:textAlignment="textEnd"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -156,6 +168,8 @@
         android:layout_width="122dp"
         android:layout_height="38dp"
         android:gravity="end"
+        android:onClick="goFormActivity_4"
+        android:text="@string/bookingbutton"
         android:textAlignment="textEnd"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -170,6 +184,8 @@
         android:layout_width="122dp"
         android:layout_height="38dp"
         android:gravity="end"
+        android:onClick="goFormActivity_6"
+        android:text="@string/bookingbutton"
         android:textAlignment="textEnd"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -184,6 +200,8 @@
         android:layout_width="122dp"
         android:layout_height="38dp"
         android:gravity="end"
+        android:onClick="goFormActivity_5"
+        android:text="@string/bookingbutton"
         android:textAlignment="textEnd"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -198,6 +216,8 @@
         android:layout_width="122dp"
         android:layout_height="38dp"
         android:gravity="end"
+        android:onClick="goFormActivity_3"
+        android:text="@string/bookingbutton"
         android:textAlignment="textEnd"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"

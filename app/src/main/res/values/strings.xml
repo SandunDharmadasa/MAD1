@@ -36,7 +36,7 @@
     <string name="Btn5">SignIn</string>
     <string name="btnHome">Home</string>
     <string name="GoBack">Go Back</string>
-    <string name="GoBack1">Home</string>
+    <string name="GoBack1">Go Back</string>
     <string name="GoBack2">Go Back</string>
     <string name="textQ">Quarantine</string>
     <string name="textP">Payment</string>
@@ -75,7 +75,6 @@
     <string name="Tp">Price for a day</string>
     <string name="Th">Hotel Name</string>
     <string name="edit10">Total Price</string>
-    <string name="btnP">Pay Now</string>
 
 
 </resources>
