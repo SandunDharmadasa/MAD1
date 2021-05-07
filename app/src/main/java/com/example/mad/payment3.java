@@ -54,7 +54,7 @@ public class payment3 extends AppCompatActivity {
 
                         dbRef.push().setValue(vi);
                         //dbRef.child("Bk1").setValue(bk);
-                        Toast.makeText(getApplicationContext(),"Signed Up Successfully!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Successfully!",Toast.LENGTH_SHORT).show();
                         clearControls();
 
                     }
