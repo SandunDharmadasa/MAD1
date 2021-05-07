@@ -33,7 +33,7 @@ public class payment2 extends AppCompatActivity {
         btnnn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbRef2 = FirebaseDatabase.getInstance().getReference().child("VISA_MASTER");
+                dbRef2 = FirebaseDatabase.getInstance().getReference().child("Web_Money");
 
                 try{
                     if(TextUtils.isEmpty(etvv6.getText().toString()))
