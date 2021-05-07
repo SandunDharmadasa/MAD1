@@ -8,21 +8,6 @@
     android:background="@drawable/background" >
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:textColor="#EA0909"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +22,7 @@
         app:layout_constraintVertical_bias="0.176" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your payment is successfull"
@@ -52,7 +37,7 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnn2"
         android:layout_width="132dp"
         android:layout_height="53dp"
         android:text="OK"
@@ -68,7 +53,7 @@
         app:layout_constraintVertical_bias="0.803" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv4"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,6 +74,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557" />
+        app:layout_constraintVertical_bias="0.557"
+        app:srcCompat="@drawable/check"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

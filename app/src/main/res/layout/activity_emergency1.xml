@@ -8,7 +8,7 @@
     tools:context=".emergency1">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton20"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#FDFDFD"
@@ -31,12 +31,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo2" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Ambulance"
         android:textColor="#FDE11010"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -47,12 +48,13 @@
         app:layout_constraintVertical_bias="0.243" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etv1"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:autofillHints=""
         android:drawableStart="@android:drawable/ic_menu_myplaces"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
         android:textColorHint="#2E2C2C"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,13 +62,13 @@
         app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565"
-        android:drawableLeft="@android:drawable/ic_menu_myplaces" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnn5"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:text="SUBMIT"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#7A0909"
@@ -81,6 +83,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Hot line"
         android:textColor="#090707"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -92,7 +95,7 @@
         app:layout_constraintVertical_bias="0.327" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnn1"
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:backgroundTint="#A9E40909"
@@ -105,9 +108,10 @@
         app:layout_constraintVertical_bias="0.43" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tv1"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:text="Phone Number"
         android:textColor="#070606"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -119,9 +123,10 @@
         app:layout_constraintVertical_bias="0.656" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tv2"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:text="Address"
         android:textColor="#090909"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -133,9 +138,10 @@
         app:layout_constraintVertical_bias="0.729" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnn3"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:text="delete"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#DD1515"
@@ -147,9 +153,10 @@
         app:layout_constraintVertical_bias="0.803" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnn4"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:text="update"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#DD1515"
@@ -161,7 +168,7 @@
         app:layout_constraintVertical_bias="0.803" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnn2"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:text="Go"
