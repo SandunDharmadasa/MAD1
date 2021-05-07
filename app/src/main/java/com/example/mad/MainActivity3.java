@@ -90,8 +90,8 @@ public class MainActivity3 extends AppCompatActivity {
                         bk.setPrice(tv7.getText().toString().trim());
                         bk.setHotel(tv8.getText().toString().trim());
 
-                        dbRef.push().setValue(bk);
-                        //dbRef.child("Bk1").setValue(bk);
+                        //dbRef.push().setValue(bk);
+                        dbRef.child("Bk1").setValue(bk);
                         Toast.makeText(getApplicationContext(),"Saved Successfully!",Toast.LENGTH_SHORT).show();
                         clearControls();
 
