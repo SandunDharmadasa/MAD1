@@ -63,5 +63,15 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "You just clicked the Book Now button", Toast.LENGTH_LONG).show();
     }
 
+    protected void onResume() {
+        super.onResume();
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Home.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

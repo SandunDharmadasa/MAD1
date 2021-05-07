@@ -93,7 +93,6 @@ public class MainActivity3 extends AppCompatActivity {
                         //dbRef.push().setValue(bk);
                         dbRef.child("Bk1").setValue(bk);
                         Toast.makeText(getApplicationContext(),"Saved Successfully!",Toast.LENGTH_SHORT).show();
-                        clearControls();
 
                     }
                 }
