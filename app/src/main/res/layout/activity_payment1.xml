@@ -11,6 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Covid - 19"
         android:textColor="#0C0B0B"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -22,23 +23,10 @@
         app:layout_constraintVertical_bias="0.096" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#E80C0C"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="Payments"
         android:textColor="#070606"
         android:textSize="34sp"
         android:textStyle="italic"
@@ -53,6 +41,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Your total fee"
         android:textColor="#020101"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -78,6 +67,7 @@
         android:id="@+id/textView5"
         android:layout_width="170dp"
         android:layout_height="60dp"
+        android:text="153 000/="
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,6 +81,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Choose your payment method"
         android:textColor="#070505"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -105,6 +96,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="VISA / MASTER"
         android:textColor="#070606"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -116,23 +108,26 @@
         app:layout_constraintVertical_bias="0.693" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#050303"
+        android:text="Web Money"
+        android:textColor="#070606"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766" />
+        app:layout_constraintVertical_bias="0.763"
+        tools:ignore="DuplicateIds" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnn2"
         android:layout_width="144dp"
         android:layout_height="48dp"
+        android:text="NEXT"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#E80909"
@@ -168,7 +163,7 @@
         app:layout_constraintVertical_bias="0.773" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv4"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"

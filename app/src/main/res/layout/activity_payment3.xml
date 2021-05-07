@@ -11,6 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="VISA / MASTER"
         android:textColor="#0B0909"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -21,26 +22,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:textColor="#D31010"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
-
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/etv10"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Card Number"
         android:inputType="number"
         android:textColor="#2B2828"
         android:textColorHint="#302D2D"
@@ -53,11 +41,12 @@
         app:layout_constraintVertical_bias="0.276" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etv1"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Cardholder Name"
         android:inputType="textPersonName"
         android:textColor="#272525"
         android:textColorHint="#302C2C"
@@ -75,6 +64,7 @@
         android:layout_height="50dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Expire Date"
         android:inputType="date"
         android:textColor="#2B2828"
         android:textColorHint="#272525"
@@ -92,6 +82,7 @@
         android:layout_height="50dp"
         android:autofillHints=""
         android:ems="10"
+        android:hint="Security Code (CVV)"
         android:inputType="textPassword"
         android:textColor="#272525"
         android:textColorHint="#232222"
@@ -104,9 +95,10 @@
         app:layout_constraintVertical_bias="0.59" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Save This Card"
         android:textColor="#090808"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -121,6 +113,7 @@
         android:id="@+id/textView4"
         android:layout_width="240dp"
         android:layout_height="35dp"
+        android:text="You can remove this card at any time from this covid 19 payments"
         android:textColor="#0C0B0B"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -143,9 +136,10 @@
         app:layout_constraintVertical_bias="0.741" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnn2"
         android:layout_width="109dp"
         android:layout_height="47dp"
+        android:text="DONE"
         app:backgroundTint="#CD0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +148,7 @@
         app:layout_constraintVertical_bias="0.904" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv4"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
