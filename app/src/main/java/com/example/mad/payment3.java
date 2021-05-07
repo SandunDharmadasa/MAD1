@@ -2,11 +2,13 @@ package com.example.mad;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -16,6 +18,7 @@ public class payment3 extends AppCompatActivity {
 
     EditText etvv2, etvv3, etvv4, etvv5;
     Button btnnn10;
+    ImageView imag6;
     DatabaseReference dbRef;
     visa vi;
 
@@ -29,6 +32,15 @@ public class payment3 extends AppCompatActivity {
         etvv4 = findViewById(R.id.editTextDate);
         etvv5 = findViewById(R.id.editTextTextPassword);
         btnnn10 = findViewById(R.id.btnn2);
+        imag6 = findViewById(R.id.iv4);
+
+        imag6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(payment3.this,payment1.class);
+                startActivity(intent);
+            }
+        });
 
         btnnn10.setOnClickListener(new View.OnClickListener() {
             @Override
