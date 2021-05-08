@@ -111,4 +111,41 @@
     <string name="pcrPayment">PAYMENT</string>
 
 
+
+    <string name="title1">Covid-19 Vaccine Registration Form</string>
+    <string name="name1">Name</string>
+    <string name="date1">Birth Date</string>
+    <string name="phone1">Phone Number</string>
+    <string name="postalCode">Postal Code</string>
+    <string name="insuranceCompany">Insurance Company</string>
+    <string name="insuranceId">Insuarance ID</string>
+    <string name="next1">NEXT</string>
+    <string name="nic1">NIC</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="gender">Gender</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email1">Email</string>
+    <string name="address1">Address</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="insurance_company">Insurance Company</string>
+    <string name="insurance_id">Insurance ID</string>
+    <string name="text1">How many vaccines you need?</string>
+    <string name="text2">Please list your current medication</string>
+    <string name="medication">Medication</string>
+    <string name="dosage">Dosage</string>
+    <string name="text3">Please list down your allergies</string>
+    <string name="allergic">Allergic to...</string>
+    <string name="text4">Please mention the symptoms that apply..,</string>
+    <string name="text5">Have you been diagnosed with covid-19?</string>
+    <string name="radio1">Yes</string>
+    <string name="radio2">No</string>
+    <string name="total">Total is=</string>
+    <string name="text6">I hereby declare that all given information are accurate</string>
+    <string name="back">Back</string>
+    <string name="edit">Cancel Registration</string>
+    <string name="register">Register</string>
+
+
+
+
 </resources>
