@@ -39,7 +39,7 @@ public class emergency1<AuthResult> extends AppCompatActivity {
         btnnn4 = findViewById(R.id.btnn4);
         btnnn5 = findViewById(R.id.btnn5);
         imagebtn2 = findViewById(R.id.imageButton20);
-        etvv1 = findViewById(R.id.etv1);
+        etvv1 = findViewById(R.id.etvv1);
         tvv1 = findViewById(R.id.tv1);
         tvv2 = findViewById(R.id.tv2);
 
