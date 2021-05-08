@@ -109,6 +109,7 @@
     <string name="title">Covid - 19  Health Care</string>
     <string name="userName">UserName</string>
     <string name="password">Password</string>
+    <string name="pcrPayment">PAYMENT</string>
 
 
 </resources>

@@ -148,7 +148,7 @@ DatabaseReference pRef;
                             Toast.makeText(getApplicationContext(),"Deleted Successfully!",Toast.LENGTH_SHORT).show();
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"No sourse to delete!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"No source to delete!",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
