@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class payment3 extends AppCompatActivity {
 
     EditText etvv2, etvv3, etvv4, etvv5;
-    Button btnnn10;
+    Button btnnn10, btnnn14;
     ImageView imag6;
     DatabaseReference dbRef;
     visa vi;
@@ -32,6 +32,7 @@ public class payment3 extends AppCompatActivity {
         etvv4 = findViewById(R.id.editTextDate);
         etvv5 = findViewById(R.id.editTextTextPassword);
         btnnn10 = findViewById(R.id.btnn2);
+        btnnn14 = findViewById(R.id.butt2);
         imag6 = findViewById(R.id.iv4);
 
         vi = new visa();
@@ -70,6 +71,16 @@ public class payment3 extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplicationContext(), "Please enter a number in here", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        btnnn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(payment3.this, payment4.class);
+                startActivity(intent);
+
             }
         });
 

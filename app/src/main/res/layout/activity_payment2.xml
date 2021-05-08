@@ -28,12 +28,13 @@
         android:layout_height="54dp"
         android:text="DONE"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:backgroundTint="#D11010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <EditText
         android:id="@+id/etv10"
@@ -115,4 +116,18 @@
         app:layout_constraintVertical_bias="0.008"
         app:srcCompat="?attr/actionModeCloseDrawable"
         app:tint="#03A9F4" />
+
+    <Button
+        android:id="@+id/butt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#9E1313"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class payment2 extends AppCompatActivity {
 
     EditText etvv6, etvv7, etvv8, etvv9;
-    Button btnnn11;
+    Button btnnn11, btnnn13;
     ImageView imag7;
     DatabaseReference dbRef2;
     Web web;
@@ -32,6 +32,7 @@ public class payment2 extends AppCompatActivity {
         etvv8 = findViewById(R.id.etv11);
         etvv9 = findViewById(R.id.etv12);
         btnnn11 = findViewById(R.id.btnn2);
+        btnnn13 = findViewById(R.id.butt1);
         imag7 = findViewById(R.id.iv4);
 
         web = new Web();
@@ -74,6 +75,16 @@ public class payment2 extends AppCompatActivity {
             }
         });
 
+        btnnn13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(payment2.this, payment4.class);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 
@@ -96,4 +107,6 @@ public class payment2 extends AppCompatActivity {
             }
         });
     }
+
+
 }
