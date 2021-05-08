@@ -3,9 +3,9 @@ package com.example.mad;
 public class Ambulance {
 
     private String name;
-    private int PhoneNumber;
+    private String PhoneNumber;
     private String address;
-    private int AmNumber;
+    private String AmNumber;
 
     public Ambulance() {
 
@@ -19,11 +19,11 @@ public class Ambulance {
         this.name = name;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return PhoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
 
@@ -35,11 +35,11 @@ public class Ambulance {
         this.address = address;
     }
 
-    public int getAmNumber() {
+    public String getAmNumber() {
         return AmNumber;
     }
 
-    public void setAmNumber(int amNumber) {
+    public void setAmNumber(String amNumber) {
         AmNumber = amNumber;
     }
 }
