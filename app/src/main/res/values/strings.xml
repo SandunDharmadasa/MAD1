@@ -90,6 +90,16 @@
     <string name="hospital5">Nawaloka Hospital - Colombo - 02</string>
     <string name="hospital6">Cdem Hospital - Norris Canal Road,</string>
     <string name="hospital6_Part2">Colombo - 10</string>
+    <string name="fillForm">Please fill this form</string>
+    <string name="pName">PATIENT NAME(Mandatory)</string>
+    <string name="nic">NATIONAL ID NO(mandatory for Sri Lanka)</string>
+    <string name="address">ADDRESS(mandatory,Please Enter Postal)</string>
+    <string name="phone">TELEPHONE(Mandatory)</string>
+    <string name="email">EMAIL</string>
+    <string name="nationality">NATIONALITY</string>
+    <string name="date">DATE</string>
+    <string name="NOoFPatients">NOoFPatients</string>
+    <string name="booking">BOOK</string>
 
 
 </resources>
