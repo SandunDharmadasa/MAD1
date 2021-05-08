@@ -84,8 +84,8 @@ public class MainActivity3 extends AppCompatActivity {
 
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity3.this);
                 managerCompat.notify(2,builder.build());
-                dbRef = FirebaseDatabase.getInstance().getReference().child("Booking");
 
+                dbRef = FirebaseDatabase.getInstance().getReference().child("Booking");
                 try{
                     if(TextUtils.isEmpty(tv1.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter a name",Toast.LENGTH_SHORT).show();
