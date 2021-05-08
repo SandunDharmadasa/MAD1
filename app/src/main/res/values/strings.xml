@@ -102,6 +102,7 @@
     <string name="NOoFPatients">NOoFPatients</string>
     <string name="booking">BOOK</string>
     <string name="deleteBooking">DELETE BOOKING</string>
+    <string name="btnP">PAY NOW</string>
 
 
 </resources>
