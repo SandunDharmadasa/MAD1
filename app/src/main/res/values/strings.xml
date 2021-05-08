@@ -82,6 +82,15 @@
     <string name="pcrStep2">02) After collection, the swab is sealed in a tube and then sent to a laboratory.</string>
     <string name="pcrStep3">03) The PCR step then uses special chemicals and a PCR machine, called a thermal cycler, which cause a reaction to occur that makes millions of copies of a small portion of the SARS-CoV-2 virus’s genetic material.</string>
     <string name="BookPcrBtn">Book a date today to take a PCR test</string>
+    <string name="hospital1">Asiri Center Hospital Norris Canal Road,</string>
+    <string name="hospital1_Part2">Colombo - 10</string>
+    <string name="bookingbutton">BOOK NOW</string>
+    <string name="hospital2">Durdans Hospital - Colombo - 05</string>
+    <string name="hospital3">Kings Hospital (Former Oasis) - Colombo - 05</string>
+    <string name="hospital4">Lanka Hospital - Colombo - 05</string>
+    <string name="hospital5">Nawaloka Hospital - Colombo - 02</string>
+    <string name="hospital6">Cdem Hospital - Norris Canal Road,</string>
+    <string name="hospital6_Part2">Colombo - 10</string>
 
 
 </resources>
