@@ -205,11 +205,12 @@ DatabaseReference pRef;
         if(no1 >= 3){
             int tot = no1 * no2 - (no1 * no2 /100 * 10);
             price.setText(String.valueOf(tot));
-            Toast.makeText(this, "You got 10 % discount", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You got 10 % discount because there are more than three patients you entered..", Toast.LENGTH_SHORT).show();
         }else {
 
             int tot = no1 * no2;
             price.setText(String.valueOf(tot));
+            Toast.makeText(this, "You do not get 10 % discount because less than three patients you entered..", Toast.LENGTH_SHORT).show();
         }
     }
     protected void onResume() {
