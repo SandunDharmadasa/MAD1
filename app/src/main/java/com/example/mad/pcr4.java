@@ -2,8 +2,13 @@ package com.example.mad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,6 +33,12 @@ DatabaseReference pRef;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pcr4);
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My notification","My notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         Intent newIntent = getIntent();
         String n2 = newIntent.getStringExtra("EXTRA_MESSAGE1");
@@ -83,6 +94,16 @@ DatabaseReference pRef;
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //notification code
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(pcr4.this,"My notification");
+                builder.setContentTitle("Date booked successfully");
+                builder.setContentText("Thank you.. Booking a date for PCR Test is successful.");
+                builder.setSmallIcon(R.drawable.covid);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(pcr4.this);
+                managerCompat.notify(1,builder.build());
+
                 pRef = FirebaseDatabase.getInstance().getReference().child("PCR_Booking");
 
                 try{
@@ -97,9 +118,9 @@ DatabaseReference pRef;
                     else if(TextUtils.isEmpty(e5.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter address",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e6.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a tel number",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please enter  telephone number",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e7.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a email",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please enter email",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e8.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter nationality",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e9.getText().toString()))
@@ -123,7 +144,7 @@ DatabaseReference pRef;
 
                         pRef.push().setValue(PCR_bk);
                         //dbRef.child("Bk1").setValue(bk);
-                        Toast.makeText(getApplicationContext(),"Saved Successfully!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Data Saved Successfully!",Toast.LENGTH_SHORT).show();
                         clearControls();
 
                     }
