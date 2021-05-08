@@ -48,8 +48,8 @@
         app:layout_constraintVertical_bias="0.243" />
 
     <EditText
-        android:id="@+id/etv1"
-        android:layout_width="220dp"
+        android:id="@+id/etvv1"
+        android:layout_width="310dp"
         android:layout_height="50dp"
         android:autofillHints=""
         android:drawableStart="@android:drawable/ic_menu_myplaces"
@@ -59,10 +59,10 @@
         android:textColorHint="#2E2C2C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <Button
         android:id="@+id/btnn5"
@@ -92,7 +92,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.294" />
 
     <Button
         android:id="@+id/btnn1"
@@ -105,41 +105,11 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
-
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Phone Number"
-        android:textColor="#070606"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.656" />
-
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Address"
-        android:textColor="#090909"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729" />
+        app:layout_constraintVertical_bias="0.371" />
 
     <Button
         android:id="@+id/btnn3"
-        android:layout_width="125dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:text="delete"
         android:textSize="18sp"
@@ -147,14 +117,14 @@
         app:backgroundTint="#DD1515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <Button
         android:id="@+id/btnn4"
-        android:layout_width="125dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:text="update"
         android:textSize="18sp"
@@ -162,25 +132,73 @@
         app:backgroundTint="#DD1515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <Button
         android:id="@+id/btnn2"
-        android:layout_width="80dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
-        android:text="Go"
+        android:text="insert"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:backgroundTint="#AEA61515"
+        app:backgroundTint="#DD1515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.813" />
+
+    <EditText
+        android:id="@+id/etvv2"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:drawableStart="@android:drawable/stat_sys_phone_call"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textColorHint="#070505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <EditText
+        android:id="@+id/etvv3"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:drawableStart="@android:drawable/ic_dialog_map"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        android:textColorHint="#0C0909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
+
+    <EditText
+        android:id="@+id/etvv4"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:drawableStart="@android:drawable/btn_star"
+        android:ems="10"
+        android:hint="Number of Ambulance"
+        android:inputType="number"
+        android:textColorHint="#040202"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.698" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
