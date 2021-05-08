@@ -96,7 +96,7 @@
     <string name="address">ADDRESS(mandatory,Please Enter Postal)</string>
     <string name="phone">TELEPHONE(Mandatory)</string>
     <string name="email">EMAIL</string>
-    <string name="nationality">NATIONALITY</string>
+    <string name="nationality">NATIONALITY ( Local or Foreign )</string>
     <string name="date">DATE</string>
     <string name="NOoFPatients">NOoFPatients</string>
     <string name="booking">BOOK</string>
