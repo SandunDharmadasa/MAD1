@@ -10,9 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-
 import android.widget.Toast;
-
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -71,13 +69,13 @@ public class emergency1  extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Please enter a Number of Ambulance",Toast.LENGTH_SHORT).show();
                     else{
                         ambulance.setName(etvvv1.getText().toString().trim());
-                        ambulance.setPhoneNumber(Integer.parseInt(etvvv2.getText().toString().trim()));
+                        ambulance.setPhoneNumber(etvvv2.getText().toString().trim());
                         ambulance.setAddress(etvvv3.getText().toString().trim());
-                        ambulance.setAmNumber(Integer.parseInt(etvvv4.getText().toString().trim()));
+                        ambulance.setAmNumber(etvvv4.getText().toString().trim());
 
                         dbRef1.push().setValue(ambulance);
                         //dbRef.child("Bk1").setValue(bk);
-                        Toast.makeText(getApplicationContext(),"Signed Up Successfully!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Successfully!",Toast.LENGTH_SHORT).show();
                         clearControls();
 
                     }
@@ -88,27 +86,7 @@ public class emergency1  extends AppCompatActivity {
             }
         });
 
-        btnnn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
-
-        btnnn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        btnnn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(emergency1.this,emergency2.class);
-                startActivity(intent);
-            }
-        });
 
     }
     private void clearControls(){
