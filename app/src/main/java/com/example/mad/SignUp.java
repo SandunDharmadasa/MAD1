@@ -1,8 +1,10 @@
 package com.example.mad;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +27,13 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        //create notification channel
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My notification","My notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
         et1 = findViewById(R.id.name);
         et2 = findViewById(R.id.pass);
         et3 = findViewById(R.id.email);
@@ -41,6 +50,16 @@ public class SignUp extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //notification code
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(SignUp.this,"My notification");
+                builder.setContentTitle("Signed Up Successfully");
+                builder.setContentText("Dear Customer, You Just Signed Up to our application. Thank you..!");
+                builder.setSmallIcon(R.drawable.covid);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(SignUp.this);
+                managerCompat.notify(3,builder.build());
+
                 dbRef1 = FirebaseDatabase.getInstance().getReference().child("User");
 
                 try{

@@ -126,7 +126,7 @@
         android:id="@+id/bookADateToday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goNext"
+
         android:text="@string/BookPcrBtn"
         app:backgroundTint="#ED2A2A"
         app:layout_constraintBottom_toBottomOf="parent"
