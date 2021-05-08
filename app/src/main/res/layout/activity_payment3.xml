@@ -137,15 +137,17 @@
 
     <Button
         android:id="@+id/btnn2"
-        android:layout_width="109dp"
-        android:layout_height="47dp"
+        android:layout_width="145dp"
+        android:layout_height="53dp"
         android:text="DONE"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:backgroundTint="#CD0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.904" />
+        app:layout_constraintVertical_bias="0.843" />
 
     <ImageView
         android:id="@+id/iv4"
@@ -159,4 +161,18 @@
         app:layout_constraintVertical_bias="0.004"
         app:srcCompat="@drawable/abc_vector_test"
         app:tint="#03A9F4" />
+
+    <Button
+        android:id="@+id/butt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#971A1A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945" />
 </androidx.constraintlayout.widget.ConstraintLayout>

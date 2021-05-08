@@ -13,6 +13,7 @@
         android:layout_height="43dp"
         android:layout_marginBottom="84dp"
         android:text="SAVE"
+        app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
@@ -185,10 +186,10 @@
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/pcrPayment"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -339,6 +340,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Total Amount"
+        app:backgroundTint="#F44336"
         app:layout_constraintBottom_toTopOf="@+id/edtTotalAmount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

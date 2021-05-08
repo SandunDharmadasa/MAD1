@@ -74,6 +74,78 @@
     <string name="Tp">Price for a day</string>
     <string name="Th">Hotel Name</string>
     <string name="edit10">Total Price</string>
+    <string name="txtV1">PCR TEST</string>
+    <string name="pcr_meaning">Polymerase Chain Reaction</string>
+    <string name="doPcr">How to do PCR Test ?</string>
+    <string name="pcrStep1">01) Sample collection is done using a swab to collect respiratory material found in your nose.</string>
+    <string name="pcrStep2">02) After collection, the swab is sealed in a tube and then sent to a laboratory.</string>
+    <string name="pcrStep3">03) The PCR step then uses special chemicals and a PCR machine, called a thermal cycler, which cause a reaction to occur that makes millions of copies of a small portion of the SARS-CoV-2 virus’s genetic material.</string>
+    <string name="BookPcrBtn">Book a date today to take a PCR test</string>
+    <string name="hospital1">Asiri Center Hospital Norris Canal Road,</string>
+    <string name="hospital1_Part2">Colombo - 10</string>
+    <string name="bookingbutton">BOOK NOW</string>
+    <string name="hospital2">Durdans Hospital - Colombo - 05</string>
+    <string name="hospital3">Kings Hospital (Former Oasis) - Colombo - 05</string>
+    <string name="hospital4">Lanka Hospital - Colombo - 05</string>
+    <string name="hospital5">Nawaloka Hospital - Colombo - 02</string>
+    <string name="hospital6">Cdem Hospital - Norris Canal Road,</string>
+    <string name="hospital6_Part2">Colombo - 10</string>
+    <string name="fillForm">Please fill this form</string>
+    <string name="pName">PATIENT NAME(Mandatory)</string>
+    <string name="nic">NATIONAL ID NO(mandatory for Sri Lanka)</string>
+    <string name="address">ADDRESS(mandatory,Please Enter Postal)</string>
+    <string name="phone">TELEPHONE(Mandatory)</string>
+    <string name="email">EMAIL</string>
+    <string name="nationality">NATIONALITY ( Local or Foreign )</string>
+    <string name="date">DATE</string>
+    <string name="NOoFPatients">NOoFPatients</string>
+    <string name="booking">BOOK</string>
+    <string name="deleteBooking">DELETE BOOKING</string>
+    <string name="btnP">PAY NOW</string>
+
+
+    <string name="name">Login</string>
+    <string name="title">Covid - 19  Health Care</string>
+    <string name="userName">UserName</string>
+    <string name="password">Password</string>
+    <string name="pcrPayment">PAYMENT</string>
+
+
+
+    <string name="title1">Covid-19 Vaccine Registration Form</string>
+    <string name="name1">Name</string>
+    <string name="date1">Birth Date</string>
+    <string name="phone1">Phone Number</string>
+    <string name="postalCode">Postal Code</string>
+    <string name="insuranceCompany">Insurance Company</string>
+    <string name="insuranceId">Insuarance ID</string>
+    <string name="next1">NEXT</string>
+    <string name="nic1">NIC</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="gender">Gender</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email1">Email</string>
+    <string name="address1">Address</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="insurance_company">Insurance Company</string>
+    <string name="insurance_id">Insurance ID</string>
+    <string name="text1">How many vaccines you need?</string>
+    <string name="text2">Please list your current medication</string>
+    <string name="medication">Medication</string>
+    <string name="dosage">Dosage</string>
+    <string name="text3">Please list down your allergies</string>
+    <string name="allergic">Allergic to...</string>
+    <string name="text4">Please mention the symptoms that apply..,</string>
+    <string name="text5">Have you been diagnosed with covid-19?</string>
+    <string name="radio1">Yes</string>
+    <string name="radio2">No</string>
+    <string name="total">Total is=</string>
+    <string name="text6">I hereby declare that all given information are accurate</string>
+    <string name="back">Back</string>
+    <string name="edit">Cancel Registration</string>
+    <string name="register">Register</string>
+
+
 
     <string name="txtV1">PCR TEST</string>
     <string name="pcr_meaning">Polymerase Chain Reaction</string>

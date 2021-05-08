@@ -2,8 +2,13 @@ package com.example.mad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -20,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class pcr4 extends AppCompatActivity {
 EditText e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,price;
-Button total,save,delete;
+Button total,save,delete,payment;
 PCR_Booking PCR_bk;
 DatabaseReference pRef;
 
@@ -28,6 +33,13 @@ DatabaseReference pRef;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pcr4);
+
+        //create notification channel
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My notification","My notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         Intent newIntent = getIntent();
         String n2 = newIntent.getStringExtra("EXTRA_MESSAGE1");
@@ -69,6 +81,7 @@ DatabaseReference pRef;
 
         save = findViewById(R.id.btnSave);
         delete = findViewById(R.id.btnDelete);
+        payment = findViewById(R.id.Finalpayment);
 
         total.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +96,17 @@ DatabaseReference pRef;
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //notification code
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(pcr4.this,"My notification");
+                builder.setContentTitle("Date booked successfully");
+                builder.setContentText("Thank you.. Booking a date for PCR Test is successful.");
+                builder.setSmallIcon(R.drawable.covid);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(pcr4.this);
+                managerCompat.notify(1,builder.build());
+
                 pRef = FirebaseDatabase.getInstance().getReference().child("PCR_Booking");
 
                 try{
@@ -97,9 +121,9 @@ DatabaseReference pRef;
                     else if(TextUtils.isEmpty(e5.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter address",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e6.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a tel number",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please enter  telephone number",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e7.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a email",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Please enter email",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e8.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter nationality",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(e9.getText().toString()))
@@ -123,7 +147,7 @@ DatabaseReference pRef;
 
                         pRef.push().setValue(PCR_bk);
                         //dbRef.child("Bk1").setValue(bk);
-                        Toast.makeText(getApplicationContext(),"Saved Successfully!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Data Saved Successfully!",Toast.LENGTH_SHORT).show();
                         clearControls();
 
                     }
@@ -148,7 +172,7 @@ DatabaseReference pRef;
                             Toast.makeText(getApplicationContext(),"Deleted Successfully!",Toast.LENGTH_SHORT).show();
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"No sourse to delete!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"No source to delete!",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -176,12 +200,28 @@ DatabaseReference pRef;
     }
 
     public void Multiplication(){
-
-        int no1 = Integer.parseInt(e10.getText().toString());
         int no2 = 500;
-        int tot = no1 * no2;
+        int no1 = Integer.parseInt(e10.getText().toString());
+        if(no1 >= 3){
+            int tot = no1 * no2 - (no1 * no2 /100 * 10);
+            price.setText(String.valueOf(tot));
+            Toast.makeText(this, "You got 10 % discount because there are more than three patients you entered..", Toast.LENGTH_SHORT).show();
+        }else {
 
-        price.setText(String.valueOf(tot));
+            int tot = no1 * no2;
+            price.setText(String.valueOf(tot));
+            Toast.makeText(this, "You do not get 10 % discount because less than three patients you entered..", Toast.LENGTH_SHORT).show();
+        }
+    }
+    protected void onResume() {
+        super.onResume();
 
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(pcr4.this, payment1.class);
+                startActivity(intent);
+            }
+        });
     }
 }

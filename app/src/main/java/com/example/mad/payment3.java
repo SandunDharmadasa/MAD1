@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class payment3 extends AppCompatActivity {
 
     EditText etvv2, etvv3, etvv4, etvv5;
-    Button btnnn10;
+    Button btnnn10, btnnn14;
     ImageView imag6;
     DatabaseReference dbRef;
     visa vi;
@@ -32,32 +32,27 @@ public class payment3 extends AppCompatActivity {
         etvv4 = findViewById(R.id.editTextDate);
         etvv5 = findViewById(R.id.editTextTextPassword);
         btnnn10 = findViewById(R.id.btnn2);
+        btnnn14 = findViewById(R.id.butt2);
         imag6 = findViewById(R.id.iv4);
 
-        imag6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(payment3.this,payment1.class);
-                startActivity(intent);
-            }
-        });
+        vi = new visa();
 
         btnnn10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbRef = FirebaseDatabase.getInstance().getReference().child("VISA_MASTER");
+                dbRef = FirebaseDatabase.getInstance().getReference().child("visa");
 
-                try{
-                    if(TextUtils.isEmpty(etvv2.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a card number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvv3.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a cardholder name",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvv4.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a expire date",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvv5.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a security code",Toast.LENGTH_SHORT).show();
+                try {
+                    if (TextUtils.isEmpty(etvv2.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a card number", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(etvv3.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a cardholder name", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(etvv4.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a expire date", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(etvv5.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a security code", Toast.LENGTH_SHORT).show();
 
-                    else{
+                    else {
                         vi.setCard_number(etvv2.getText().toString().trim());
                         vi.setCardholder_name(etvv3.getText().toString().trim());
                         vi.setExpire_date(etvv4.getText().toString().trim());
@@ -65,24 +60,51 @@ public class payment3 extends AppCompatActivity {
 
 
                         dbRef.push().setValue(vi);
-                        //dbRef.child("Bk1").setValue(bk);
-                        Toast.makeText(getApplicationContext(),"Successfully!",Toast.LENGTH_SHORT).show();
-                        clearControls();
+                        //dbRef.child("vi1").setValue(vi);
+                        Toast.makeText(getApplicationContext(), "Successfully!", Toast.LENGTH_SHORT).show();
+                        //clearControls();
+
+                        //Intent intent = new Intent(payment3.this, payment4.class);
+                        //startActivity(intent);
 
                     }
-                }
-                catch (NumberFormatException e){
-                    Toast.makeText(getApplicationContext(),"Please enter a number in here",Toast.LENGTH_SHORT).show();
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getApplicationContext(), "Please enter a number in here", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+        btnnn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(payment3.this, payment4.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
-    private void clearControls(){
+
+    private void clearControls() {
         etvv2.setText("");
         etvv3.setText("");
         etvv4.setText("");
         etvv5.setText("");
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    imag6.setOnClickListener(new View.OnClickListener()
+
+    {
+        @Override
+        public void onClick (View v){
+        Intent intent = new Intent(payment3.this, payment1.class);
+        startActivity(intent);
+    }
+    });
+}
 }

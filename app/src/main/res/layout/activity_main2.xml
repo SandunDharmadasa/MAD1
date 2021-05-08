@@ -18,7 +18,7 @@
         android:textColor="#040404"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalName_1" />
 
     <EditText
         android:id="@+id/editT10"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/hospitalName_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -54,7 +54,7 @@
         android:ems="10"
         android:hint="Type here"
         android:inputType="number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hospitalName_1"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
