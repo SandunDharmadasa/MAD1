@@ -34,30 +34,25 @@ public class payment2 extends AppCompatActivity {
         btnnn11 = findViewById(R.id.btnn2);
         imag7 = findViewById(R.id.iv4);
 
-        imag7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(payment2.this,payment1.class);
-                startActivity(intent);
-            }
-        });
+        web = new Web();
+
 
         btnnn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbRef2 = FirebaseDatabase.getInstance().getReference().child("Web_Money");
+                dbRef2 = FirebaseDatabase.getInstance().getReference().child("Web");
 
-                try{
-                    if(TextUtils.isEmpty(etvv6.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a account number",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvv7.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a bank name",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvv8.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a branch of the bank",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvv9.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a transaction number",Toast.LENGTH_SHORT).show();
+                try {
+                    if (TextUtils.isEmpty(etvv6.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a account number", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(etvv7.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a bank name", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(etvv8.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a branch of the bank", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(etvv9.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a transaction number", Toast.LENGTH_SHORT).show();
 
-                    else{
+                    else {
                         web.setAccount_number(etvv6.getText().toString().trim());
                         web.setBank_name(etvv7.getText().toString().trim());
                         web.setBranchOfThe_bank(etvv8.getText().toString().trim());
@@ -66,24 +61,39 @@ public class payment2 extends AppCompatActivity {
 
                         dbRef2.push().setValue(web);
                         //dbRef.child("Bk1").setValue(bk);
-                        Toast.makeText(getApplicationContext(),"Successfully!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Successfully!", Toast.LENGTH_SHORT).show();
                         clearControls();
 
+                        //Intent intent = new Intent(payment2.this,payment4.class);
+                        //startActivity(intent);
+
                     }
-                }
-                catch (NumberFormatException e){
-                    Toast.makeText(getApplicationContext(),"Please enter a number in here",Toast.LENGTH_SHORT).show();
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getApplicationContext(), "Please enter a number in here", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
 
     }
-    private void clearControls(){
+
+    private void clearControls() {
         etvv6.setText("");
         etvv7.setText("");
         etvv8.setText("");
         etvv9.setText("");
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        imag7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(payment2.this, payment1.class);
+                startActivity(intent);
+            }
+        });
     }
 }
