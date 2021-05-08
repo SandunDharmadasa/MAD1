@@ -101,6 +101,7 @@
     <string name="date">DATE</string>
     <string name="NOoFPatients">NOoFPatients</string>
     <string name="booking">BOOK</string>
+    <string name="deleteBooking">DELETE BOOKING</string>
 
 
 </resources>
