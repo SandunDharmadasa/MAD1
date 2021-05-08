@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class pcr4 extends AppCompatActivity {
 EditText e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,price;
-Button total,save,delete;
+Button total,save,delete,payment;
 PCR_Booking PCR_bk;
 DatabaseReference pRef;
 
@@ -34,6 +34,7 @@ DatabaseReference pRef;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pcr4);
 
+        //create notification channel
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
             NotificationChannel channel = new NotificationChannel("My notification","My notification", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
@@ -80,6 +81,7 @@ DatabaseReference pRef;
 
         save = findViewById(R.id.btnSave);
         delete = findViewById(R.id.btnDelete);
+        payment = findViewById(R.id.Finalpayment);
 
         total.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +96,7 @@ DatabaseReference pRef;
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 //notification code
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(pcr4.this,"My notification");
                 builder.setContentTitle("Date booked successfully");
@@ -208,5 +211,16 @@ DatabaseReference pRef;
             int tot = no1 * no2;
             price.setText(String.valueOf(tot));
         }
+    }
+    protected void onResume() {
+        super.onResume();
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(pcr4.this, payment1.class);
+                startActivity(intent);
+            }
+        });
     }
 }
