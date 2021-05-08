@@ -19,11 +19,11 @@ import com.google.firebase.database.ValueEventListener;
 
 
 
-public class emergency1<AuthResult> extends AppCompatActivity {
+public class emergency1  extends AppCompatActivity {
 
     Button btnnn1, btnnn2, btnnn3, btnnn4, btnnn5;
     ImageButton imagebtn2;
-    EditText etvv1;
+    EditText etvvv1 , etvvv2, etvvv3, etvvv4;
     TextView tvv1, tvv2;
     DatabaseReference Reference;
     FirebaseDatabase mAuth;
@@ -39,9 +39,11 @@ public class emergency1<AuthResult> extends AppCompatActivity {
         btnnn4 = findViewById(R.id.btnn4);
         btnnn5 = findViewById(R.id.btnn5);
         imagebtn2 = findViewById(R.id.imageButton20);
-        etvv1 = findViewById(R.id.etvv1);
-        tvv1 = findViewById(R.id.tv1);
-        tvv2 = findViewById(R.id.tv2);
+        etvvv1 = findViewById(R.id.etvv1);
+        etvvv2 = findViewById(R.id.etvv2);
+        etvvv3 = findViewById(R.id.etvv3);
+        etvvv3 = findViewById(R.id.etvv4);
+        
 
         imagebtn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,24 +57,23 @@ public class emergency1<AuthResult> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Reference = FirebaseDatabase.getInstance().getReference().child("User").child("1");
-                Reference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String tel = snapshot.child("tel").getValue().toString();
-                        String address = snapshot.child("address").getValue().toString();
-                        tvv1.setText(tel);
-                        tvv2.setText(address);
-                    }
+            }
+        });
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+        btnnn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });
+
+        btnnn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         btnnn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
