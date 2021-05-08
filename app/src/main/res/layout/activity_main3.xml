@@ -138,6 +138,7 @@
             android:layout_height="65dp"
             android:layout_weight="1"
             android:text="@string/btnP"
+            android:textStyle="bold"
             app:backgroundTint="#FF0000" />
 
     </LinearLayout>
