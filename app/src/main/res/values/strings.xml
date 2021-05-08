@@ -104,4 +104,10 @@
     <string name="btnP">PAY NOW</string>
 
 
+    <string name="name">Login</string>
+    <string name="title">Covid - 19  Health Care</string>
+    <string name="userName">UserName</string>
+    <string name="password">Password</string>
+
+
 </resources>
