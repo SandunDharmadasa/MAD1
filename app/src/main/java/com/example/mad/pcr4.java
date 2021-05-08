@@ -176,12 +176,16 @@ DatabaseReference pRef;
     }
 
     public void Multiplication(){
-
-        int no1 = Integer.parseInt(e10.getText().toString());
         int no2 = 500;
-        int tot = no1 * no2;
+        int no1 = Integer.parseInt(e10.getText().toString());
+        if(no1 >= 3){
+            int tot = no1 * no2 - (no1 * no2 /100 * 10);
+            price.setText(String.valueOf(tot));
+            Toast.makeText(this, "You got 10 % discount", Toast.LENGTH_SHORT).show();
+        }else {
 
-        price.setText(String.valueOf(tot));
-
+            int tot = no1 * no2;
+            price.setText(String.valueOf(tot));
+        }
     }
 }
