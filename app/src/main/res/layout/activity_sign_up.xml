@@ -8,7 +8,7 @@
     tools:context=".SignUp">
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/hospitalName_4"
         android:layout_width="164dp"
         android:layout_height="47dp"
         android:layout_marginTop="6dp"
@@ -48,10 +48,10 @@
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalName_6" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/hospitalName_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -61,7 +61,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalName_3" />
 
     <EditText
         android:id="@+id/address"
@@ -103,10 +103,10 @@
         android:ems="10"
         android:hint="Type here"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hospitalName_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView20" />
+        app:layout_constraintStart_toEndOf="@+id/hospitalName_3" />
 
     <TextView
         android:id="@+id/textView26"
@@ -182,10 +182,10 @@
         android:ems="10"
         android:hint="Type here"
         android:inputType="textEmailAddress"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hospitalName_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView22" />
+        app:layout_constraintStart_toEndOf="@+id/hospitalName_6" />
 
     <EditText
         android:id="@+id/tel"
@@ -216,7 +216,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/hospitalName_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -226,7 +226,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalName_5" />
 
     <TextView
         android:id="@+id/textView28"
@@ -240,7 +240,7 @@
         android:textColor="#000000"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/signIn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup" />
 
@@ -270,13 +270,13 @@
         android:ems="10"
         android:hint="Type here"
         android:inputType="textPassword"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView21"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hospitalName_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView21" />
+        app:layout_constraintStart_toEndOf="@+id/hospitalName_5" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/signIn"
         android:layout_width="88dp"
         android:layout_height="33dp"
         android:layout_marginTop="7dp"
@@ -293,7 +293,7 @@
         app:layout_constraintTop_toBottomOf="@+id/signup" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/hospitalName_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -313,7 +313,7 @@
         android:layout_marginLeft="107dp"
         android:layout_marginTop="6dp"
         android:src="@drawable/signup"
-        app:layout_constraintEnd_toStartOf="@+id/textView19"
+        app:layout_constraintEnd_toStartOf="@+id/hospitalName_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
