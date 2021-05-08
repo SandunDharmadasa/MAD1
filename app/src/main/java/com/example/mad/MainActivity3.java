@@ -2,8 +2,13 @@ package com.example.mad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,6 +32,14 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        //create notification channel
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My notification","My notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
         Intent newIntent = getIntent();
         String n1 = newIntent.getStringExtra("EXTRA_MESSAGE1");
         String n2 = newIntent.getStringExtra("EXTRA_MESSAGE2");
@@ -62,6 +75,15 @@ public class MainActivity3 extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //notification code
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity3.this,"My notification");
+                builder.setContentTitle("Hotel Booked Successfully");
+                builder.setContentText("Your booking to the quarantine is successfully added. Thank you..!");
+                builder.setSmallIcon(R.drawable.covid);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity3.this);
+                managerCompat.notify(2,builder.build());
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Booking");
 
                 try{
