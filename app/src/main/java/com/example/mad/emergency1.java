@@ -22,10 +22,10 @@ import com.google.firebase.database.ValueEventListener;
 
 public class emergency1  extends AppCompatActivity {
 
-    Button btnnn1, btnnn2, btnnn3, btnnn4, btnnn5;
+    Button btnnn1, btnnn2, btnnn3, btnnn5;
     ImageButton imagebtn2;
-    EditText etvvv1 , etvvv2, etvvv3, etvvv4;
-    DatabaseReference dbRef1;
+    EditText etvvv1 , etvvv2, etvvv3;
+    DatabaseReference dbRef4;
     Ambulance ambulance;
 
     @Override
@@ -36,20 +36,20 @@ public class emergency1  extends AppCompatActivity {
         btnnn1 = findViewById(R.id.btnn1);
         btnnn2 = findViewById(R.id.btnn2);
         btnnn3 = findViewById(R.id.btnn3);
-        btnnn4 = findViewById(R.id.btnn4);
+
         btnnn5 = findViewById(R.id.btnn5);
         imagebtn2 = findViewById(R.id.imageButton20);
         etvvv1 = findViewById(R.id.etvv1);
         etvvv2 = findViewById(R.id.etvv2);
         etvvv3 = findViewById(R.id.etvv3);
-        etvvv3 = findViewById(R.id.etvv4);
+
 
         ambulance = new Ambulance();
 
         btnnn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbRef1 = FirebaseDatabase.getInstance().getReference().child("Ambulance");
+                dbRef4 = FirebaseDatabase.getInstance().getReference().child("Ambulance");
 
                 try{
                     if(TextUtils.isEmpty(etvvv1.getText().toString()))
@@ -58,16 +58,15 @@ public class emergency1  extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Please enter a Phone Number",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(etvvv3.getText().toString()))
                         Toast.makeText(getApplicationContext(),"Please enter a Address",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(etvvv4.getText().toString()))
-                        Toast.makeText(getApplicationContext(),"Please enter a Number of Ambulance",Toast.LENGTH_SHORT).show();
+
                     else{
                         ambulance.setName(etvvv1.getText().toString().trim());
                         ambulance.setPhoneNumber(etvvv2.getText().toString().trim());
                         ambulance.setAddress(etvvv3.getText().toString().trim());
-                        ambulance.setAmNumber(etvvv4.getText().toString().trim());
 
-                        dbRef1.push().setValue(ambulance);
-                        //dbRef.child("Bk1").setValue(bk);
+
+                        //dbRef4.push().setValue(ambulance);
+                        dbRef4.child("AB1").setValue(ambulance);
                         Toast.makeText(getApplicationContext(),"Successfully!",Toast.LENGTH_SHORT).show();
                         clearControls();
 
@@ -79,34 +78,7 @@ public class emergency1  extends AppCompatActivity {
             }
         });
 
-        btnnn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatabaseReference delRef1 = FirebaseDatabase.getInstance().getReference().child("Ambulance").child("Ab1");
-                delRef1.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                        if (snapshot.hasChildren()) {
-
-                            etvvv1.setText(snapshot.child("name").getValue().toString());
-                            etvvv2.setText(snapshot.child("PhoneNumber").getValue().toString());
-                            etvvv3.setText(snapshot.child("address").getValue().toString());
-                            etvvv4.setText(snapshot.child("AmNumber").getValue().toString());
-
-                        } else
-
-                            Toast.makeText(getApplicationContext(), "Nothing to Display", Toast.LENGTH_SHORT).show();
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-            }
-        });
 
         btnnn3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,9 +87,9 @@ public class emergency1  extends AppCompatActivity {
                 delRef1.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.hasChild("Ab1")){
-                            dbRef1 = FirebaseDatabase.getInstance().getReference().child("Ambulance").child("Ab1");
-                            dbRef1.removeValue();
+                        if(snapshot.hasChild("AB1")){
+                            dbRef4 = FirebaseDatabase.getInstance().getReference().child("Ambulance").child("AB1");
+                            dbRef4.removeValue();
                             clearControls();
                             Toast.makeText(getApplicationContext(),"Deleted Successfully!",Toast.LENGTH_SHORT).show();
                         }
@@ -134,23 +106,6 @@ public class emergency1  extends AppCompatActivity {
             }
         });
 
-        imagebtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(emergency1.this,Home.class);
-                startActivity(intent);
-            }
-        });
-
-        btnnn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(emergency1.this,emergency2.class);
-                startActivity(intent);
-            }
-        });
-
-
         
 
     }
@@ -158,12 +113,30 @@ public class emergency1  extends AppCompatActivity {
         etvvv1.setText("");
         etvvv2.setText("");
         etvvv3.setText("");
-        etvvv4.setText("");
+
 
     }
-    
+
+    protected void onResume() {
+        super.onResume();
+        imagebtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(emergency1.this, Home.class);
+                startActivity(intent);
+            }
+        });
+
+        btnnn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(emergency1.this, emergency2.class);
+                startActivity(intent);
+            }
+        });
 
 
+    }
 
 
 }

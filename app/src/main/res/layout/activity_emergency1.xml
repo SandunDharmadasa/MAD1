@@ -123,21 +123,6 @@
         app:layout_constraintVertical_bias="0.813" />
 
     <Button
-        android:id="@+id/btnn4"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:text="show"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="#DD1515"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
-
-    <Button
         android:id="@+id/btnn2"
         android:layout_width="110dp"
         android:layout_height="50dp"
@@ -183,22 +168,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.625" />
-
-    <EditText
-        android:id="@+id/etvv4"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:drawableStart="@android:drawable/btn_star"
-        android:ems="10"
-        android:hint="Number of Ambulance"
-        android:inputType="number"
-        android:textColorHint="#040202"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
