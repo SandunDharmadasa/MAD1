@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class payment1 extends AppCompatActivity {
 
-    TextView tv20;
+    TextView tv20, tv46;
     Button btnnn20, btnnn21;
     ImageView imag8;
 
@@ -21,6 +21,7 @@ public class payment1 extends AppCompatActivity {
         setContentView(R.layout.activity_payment1);
 
         tv20 = findViewById(R.id.textView5);
+        tv46 = findViewById(R.id.textView46);
         btnnn20 = findViewById(R.id.button22);
         btnnn21 = findViewById(R.id.button24);
         imag8 = findViewById(R.id.iv4);
