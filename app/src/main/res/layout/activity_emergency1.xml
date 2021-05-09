@@ -126,7 +126,7 @@
         android:id="@+id/btnn4"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:text="update"
+        android:text="show"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#DD1515"

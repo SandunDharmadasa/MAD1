@@ -80,6 +80,35 @@ public class emergency1  extends AppCompatActivity {
             }
         });
 
+        btnnn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference delRef1 = FirebaseDatabase.getInstance().getReference().child("Ambulance").child("Ab1");
+                delRef1.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        if (snapshot.hasChildren()) {
+
+                            etvvv1.setText(snapshot.child("name").getValue().toString());
+                            etvvv2.setText(snapshot.child("PhoneNumber").getValue().toString());
+                            etvvv3.setText(snapshot.child("address").getValue().toString());
+                            etvvv4.setText(snapshot.child("AmNumber").getValue().toString());
+
+                        } else
+
+                            Toast.makeText(getApplicationContext(), "Nothing to Display", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
+
         btnnn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
