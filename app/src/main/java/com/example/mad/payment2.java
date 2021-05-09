@@ -63,7 +63,7 @@ public class payment2 extends AppCompatActivity {
                         dbRef2.push().setValue(web);
                         //dbRef.child("Bk1").setValue(bk);
                         Toast.makeText(getApplicationContext(), "Successfully!", Toast.LENGTH_SHORT).show();
-                        clearControls();
+                        //clearControls();
 
                         //Intent intent = new Intent(payment2.this,payment4.class);
                         //startActivity(intent);
