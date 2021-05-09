@@ -63,6 +63,16 @@ public class emergency2 extends AppCompatActivity {
                 tvv4.setText("results is "+mu);
             }
         });
+        btnnn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String amount = tvv4.getText().toString();
+
+                Intent intent = new Intent(emergency2.this,payment1.class);
+                intent.putExtra("AMOUNT", amount);
+                startActivity(intent);
+            }
+        });
 
     }
 

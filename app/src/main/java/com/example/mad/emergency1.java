@@ -106,6 +106,22 @@ public class emergency1  extends AppCompatActivity {
             }
         });
 
+        imagebtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(emergency1.this,Home.class);
+                startActivity(intent);
+            }
+        });
+
+        btnnn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(emergency1.this,emergency2.class);
+                startActivity(intent);
+            }
+        });
+
     }
     private void clearControls(){
         etvvv1.setText("");
@@ -114,17 +130,7 @@ public class emergency1  extends AppCompatActivity {
         etvvv4.setText("");
 
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        imagebtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(emergency1.this,Home.class);
-                startActivity(intent);
-            }
-        });
-    }
+
 
 
 
