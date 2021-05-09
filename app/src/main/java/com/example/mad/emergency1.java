@@ -45,7 +45,6 @@ public class emergency1  extends AppCompatActivity {
         etvvv3 = findViewById(R.id.etvv4);
 
         ambulance = new Ambulance();
-        
 
         btnnn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,6 +150,9 @@ public class emergency1  extends AppCompatActivity {
             }
         });
 
+
+        
+
     }
     private void clearControls(){
         etvvv1.setText("");
@@ -159,6 +161,7 @@ public class emergency1  extends AppCompatActivity {
         etvvv4.setText("");
 
     }
+    
 
 
 
